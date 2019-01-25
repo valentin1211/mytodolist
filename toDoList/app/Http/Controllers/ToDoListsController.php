@@ -12,10 +12,17 @@ class ToDoListsController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+
+
     public function index()
     {
 
-        $toDoLists = ToDoList::all();
+        $toDoLists = ToDoList::where('owner_id', auth()->id())->get();
 
         return view('toDoLists.index', compact('toDoLists'));
 
@@ -43,6 +50,7 @@ class ToDoListsController extends Controller
         $attributes = request()->validate([
             'title' => ['required', 'min:3', 'max:5']
         ]);
+        $attributes['owner_id'] = auth()->id();
         ToDoList::create($attributes);
 
         return redirect('/todolists');
@@ -56,6 +64,7 @@ class ToDoListsController extends Controller
      */
     public function show(ToDoList $todolist)
     {
+
 
         return view('toDoLists.show', compact('todolist'));
     }

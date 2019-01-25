@@ -15,7 +15,11 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::resource('todolists', 'ToDoListsController');
+Route::resource('todolists', 'ToDoListsController')->middleware('can:update,todolist');
 
 Route::post('/todolists/{todolist}/tasks', 'ToDoListTasksController@store');
 Route::patch('/tasks/{task}', 'ToDoListTasksController@update');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');

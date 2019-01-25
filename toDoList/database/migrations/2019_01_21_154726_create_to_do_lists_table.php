@@ -15,8 +15,13 @@ class CreateToDoListsTable extends Migration
     {
         Schema::create('to_do_lists', function (Blueprint $table) {
             $table->increments('id');
+            $table->unsignedInteger('owner_id');
             $table->string('title');
             $table->timestamps();
+
+
+
+            $table->foreign('owner_id')->references('id')->on('users')->onDelete('cascade');
         });
     }
 
