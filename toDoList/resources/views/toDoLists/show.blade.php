@@ -13,26 +13,9 @@
 
     </form>
 
-    @if ($todolist->tasks->count())
-        <ul>
 
-            @foreach ($todolist->tasks as $task)
-               
-                <li>
-                    <form action="/tasks/{{ $task->id }}" method="POST" >
-                        @method("PATCH")
-                        @csrf
-                        <input type="checkbox" name="completed" onchange="this.form.submit()" {{ $task->completed ? "checked" : "" }}>
-                        {{ $task->description }}
-                    </form>
-
-                </li>
-            @endforeach
-
-        </ul>
-    @else
-        <p>You dont have any tasks.</p>
-    @endif
+    @include('listtasks')
+    
 
     {{-- add a new task --}}
     <form action="/todolists/{{ $todolist->id }}/tasks" method="post">

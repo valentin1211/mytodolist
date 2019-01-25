@@ -8,12 +8,16 @@
     <link rel="stylesheet" type="text/css" href="/css/main.css">
 </head>
 <body>
+
+    <header>
+            @yield('title')
+    </header>
     
-    <div class="container">
+    <section>
 
         @yield('content')
 
-    </div>
+    </section>
 
 </body>
 </html>

@@ -1,0 +1,52 @@
+.thelist {
+    width: 300px;
+    border: solid 1px red;
+    display: inline-block;
+    vertical-align:top;  
+    margin: 2rem;
+
+    &__header{
+
+        padding: 1rem;
+        border-bottom: 1px red solid;
+        text-align: center;
+
+
+        &-title {
+            text-decoration: none;
+            color: black;
+            text-transform: capitalize;
+    
+        }
+
+    }
+
+    &__list-tasks{
+        list-style: none;
+        padding: 1rem;
+
+
+    }
+
+    &__task{
+        padding:0.5rem;
+        background-color: rgb(167, 159, 159);
+        margin-bottom: 1rem;
+
+        &-checkbox{
+            float: left;
+        }
+
+        &-title{
+            padding-left: 3rem;
+            color:black;
+            font-weight: normal;
+            
+            &--completed{
+                text-decoration: line-through;
+
+            }
+        }
+
+    }
+}

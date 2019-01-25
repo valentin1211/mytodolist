@@ -16,15 +16,16 @@ class ToDoListsController extends Controller
     public function __construct()
     {
         $this->middleware('auth');
+        $this->middleware('can:update,todolist')->except(['index','create', 'store']);
     }
 
 
     public function index()
     {
 
-        $toDoLists = ToDoList::where('owner_id', auth()->id())->get();
+        $todolists = ToDoList::where('owner_id', auth()->id())->get();
 
-        return view('toDoLists.index', compact('toDoLists'));
+        return view('toDoLists.index', compact('todolists'));
 
     }
 
@@ -48,7 +49,7 @@ class ToDoListsController extends Controller
     public function store(Request $request)
     {
         $attributes = request()->validate([
-            'title' => ['required', 'min:3', 'max:5']
+            'title' => ['required', 'min:3', 'max:50']
         ]);
         $attributes['owner_id'] = auth()->id();
         ToDoList::create($attributes);
@@ -64,8 +65,6 @@ class ToDoListsController extends Controller
      */
     public function show(ToDoList $todolist)
     {
-
-
         return view('toDoLists.show', compact('todolist'));
     }
 

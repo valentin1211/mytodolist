@@ -15,7 +15,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::resource('todolists', 'ToDoListsController')->middleware('can:update,todolist');
+Route::resource('todolists', 'ToDoListsController');
 
 Route::post('/todolists/{todolist}/tasks', 'ToDoListTasksController@store');
 Route::patch('/tasks/{task}', 'ToDoListTasksController@update');
