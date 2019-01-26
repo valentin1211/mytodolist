@@ -2,6 +2,10 @@
   text-align: center !important;
 }
 
+.u-padding-left-medium {
+  padding-left: 2rem;
+}
+
 .u-margin-bottom-big {
   margin-bottom: 8rem !important;
 }
@@ -20,4 +24,11 @@
 
 .u-margin-top-huge {
   margin-top: 10rem !important;
+}
+
+.u-position-button-right{
+  position: absolute;
+  right: 5%;
+  top:50%;
+  transform: translate(0%, -50%);
 }

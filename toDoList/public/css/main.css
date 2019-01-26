@@ -126,48 +126,12 @@ body {
   text-transform: uppercase;
   -webkit-backface-visibility: hidden;
           backface-visibility: hidden;
-  margin-bottom: 5rem;
-}
-
-.heading-primary--main {
   display: block;
-  font-size: 6rem;
-  font-weight: 400;
-  letter-spacing: 3.5rem;
-  -webkit-animation-name: moveInLeft;
-          animation-name: moveInLeft;
-  -webkit-animation-duration: 1s;
-          animation-duration: 1s;
-  -webkit-animation-timing-function: ease-out;
-          animation-timing-function: ease-out;
-}
-
-.heading-primary--sub {
-  display: block;
-  font-size: 20px;
-  letter-spacing: 1.7rem;
-  padding-right: 1.5rem;
-  font-weight: 700;
-  -webkit-animation: moveInRight 1s ease-out;
-          animation: moveInRight 1s ease-out;
+  font-size: 4rem;
 }
 
 .heading-secondary {
   font-size: 3.5rem;
-  text-transform: uppercase;
-  font-weight: 700;
-  background-image: linear-gradient(to right, #55c57a, #28b485);
-  display: inline-block;
-  -webkit-background-clip: text;
-  color: transparent;
-  letter-spacing: 0.2rem;
-  transition: all 0.2s;
-}
-
-.heading-secondary:hover {
-  -webkit-transform: skewY(2deg) skewX(15deg) scale(1.1);
-          transform: skewY(2deg) skewX(15deg) scale(1.1);
-  text-shadow: 0.5rem 1rem 2rem rgba(0, 0, 0, 0.2);
 }
 
 .heading-tertiary {
@@ -186,6 +150,10 @@ body {
 
 .u-center-text {
   text-align: center !important;
+}
+
+.u-padding-left-medium {
+  padding-left: 2rem;
 }
 
 .u-margin-bottom-big {
@@ -208,18 +176,29 @@ body {
   margin-top: 10rem !important;
 }
 
+.u-position-button-right {
+  position: absolute;
+  right: 5%;
+  top: 50%;
+  -webkit-transform: translate(0%, -50%);
+          transform: translate(0%, -50%);
+}
+
 .thelist {
   width: 300px;
-  border: solid 1px red;
   display: inline-block;
   vertical-align: top;
   margin: 2rem;
+  background-color: white;
+  border: solid 1px #DCDCDC;
+  border-radius: 3px;
+  box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
 }
 
 .thelist__header {
-  padding: 1rem;
-  border-bottom: 1px red solid;
-  text-align: center;
+  padding: 1rem 1rem 1rem 1.5rem;
+  border-bottom: solid 1px #DCDCDC;
+  position: relative;
 }
 
 .thelist__header-title {
@@ -230,12 +209,12 @@ body {
 
 .thelist__list-tasks {
   list-style: none;
-  padding: 1rem;
+  padding: 1rem 1.5rem 1rem 1.5rem;
 }
 
 .thelist__task {
   padding: 0.5rem;
-  background-color: #a79f9f;
+  background-color: #D3D3D3;
   margin-bottom: 1rem;
 }
 
@@ -253,7 +232,91 @@ body {
   text-decoration: line-through;
 }
 
+.indication {
+  position: absolute;
+  top: 50%;
+  right: 2rem;
+  -webkit-transform: translate(0%, -50%);
+          transform: translate(0%, -50%);
+  padding: 1.25rem;
+  border: solid 1px red;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.indication:hover .indication-hidden {
+  display: block;
+}
+
+.indication-hidden {
+  display: none;
+  position: absolute;
+  width: 250px;
+  border: solid 1px #D3D3D3;
+  border-radius: 5px;
+  background-color: white;
+  padding: 0.5rem;
+  top: -5.5rem;
+  right: 1.5rem;
+}
+
+.indication__symbol {
+  position: absolute;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.btn {
+  font-size: 1.6rem;
+}
+
+.btn,
+.btn:link,
+.btn:visited {
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 1.2rem 1.5rem;
+  display: inline-block;
+  border-radius: 1rem;
+  transition: all 0.2s;
+  position: relative;
+  border: none;
+  cursor: pointer;
+}
+
+.btn:hover {
+  -webkit-transform: translateY(-3px);
+          transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.btn:active,
+.btn:focus {
+  outline: none;
+  -webkit-transform: translateY(-1px);
+          transform: translateY(-1px);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.btn--white {
+  background-color: white;
+  color: #777;
+}
+
+.btn--white::after {
+  background-color: white;
+}
+
+.header {
+  background-image: linear-gradient(to right, #5643fa, #2998ff);
+  position: relative;
+}
+
 .main__thelists {
   list-style: none;
+  background-color: #f7f7f7;
 }
 

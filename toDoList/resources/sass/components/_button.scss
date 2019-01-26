@@ -1,0 +1,44 @@
+.btn {
+
+    font-size: $defautl-font-size;
+  
+    &, &:link, &:visited {
+      text-transform: uppercase;
+      text-decoration: none;
+      padding: 1.2rem 1.5rem;
+      display: inline-block;
+      border-radius: 1rem;
+      transition: all .2s;
+      position: relative;
+  
+      //original button style removed
+      border: none;
+      cursor: pointer;
+  
+    }
+  
+    &:hover{
+      transform: translateY(-3px);
+      box-shadow: 0 10px 20px rgba(0,0,0,.2);
+  
+    }
+  
+    &:active, &:focus{
+      outline: none;
+      transform: translateY(-1px);
+      box-shadow: 0 5px 10px rgba(0,0,0,.2);
+    }
+  
+    &--white{
+      background-color: white;
+      color: #777;
+  
+      &::after{
+        background-color: white;
+      }
+    }
+  
+  
+  
+  
+  }

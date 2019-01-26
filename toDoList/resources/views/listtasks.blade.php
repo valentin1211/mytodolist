@@ -17,7 +17,7 @@
 
         </ul>
 @else
-        <p>You dont have any tasks.</p>
+        <p class="u-center-text">You dont have any tasks.</p>
 @endif
 
 

@@ -1,15 +1,18 @@
 .thelist {
     width: 300px;
-    border: solid 1px red;
     display: inline-block;
     vertical-align:top;  
     margin: 2rem;
+    background-color: $color-white;
+    border: solid 1px $color-grey-light-3;
+    border-radius: 3px;
+    box-shadow: 0 1.5rem 4rem $shadow;
 
     &__header{
 
-        padding: 1rem;
-        border-bottom: 1px red solid;
-        text-align: center;
+        padding: 1rem 1rem 1rem 1.5rem;
+        border-bottom: solid 1px $color-grey-light-3;
+        position: relative;
 
 
         &-title {
@@ -23,14 +26,14 @@
 
     &__list-tasks{
         list-style: none;
-        padding: 1rem;
+        padding: 1rem 1.5rem 1rem 1.5rem;
 
 
     }
 
     &__task{
         padding:0.5rem;
-        background-color: rgb(167, 159, 159);
+        background-color: $color-grey-light-4;
         margin-bottom: 1rem;
 
         &-checkbox{
