@@ -8,8 +8,10 @@
     border-radius: 50%;
     cursor: pointer;
 
+
     &:hover &-hidden{
         display: block;
+
     }
 
     &-hidden{
@@ -24,15 +26,16 @@
         right: 1.5rem;
 
 
+
         
 
         &__text{
-
         }
     }
 
     &__symbol{
         position: absolute;
         @include divCenter;
+
     }
 }

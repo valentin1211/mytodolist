@@ -14,7 +14,7 @@
 @section('content')
 
 
-<ul class="main__thelists ">
+<ul class="main__thelists">
     @foreach ($todolists as $todolist)
         <li class="thelist">
             <div class="thelist__header">

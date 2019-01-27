@@ -205,6 +205,8 @@ body {
   text-decoration: none;
   color: black;
   text-transform: capitalize;
+  overflow-wrap: break-word;
+  padding-right: 40px;
 }
 
 .thelist__list-tasks {
@@ -226,6 +228,7 @@ body {
   padding-left: 3rem;
   color: black;
   font-weight: normal;
+  overflow-wrap: break-word;
 }
 
 .thelist__task-title--completed {
@@ -310,9 +313,29 @@ body {
   background-color: white;
 }
 
+.btn--red {
+  background-color: #da2828;
+  color: white;
+}
+
+.btn--red::after {
+  background-color: #da2828;
+}
+
 .header {
   background-image: linear-gradient(to right, #5643fa, #2998ff);
   position: relative;
+}
+
+.main__bg {
+  background-color: #f7f7f7;
+  padding: 100px;
+}
+
+.main__show {
+  background-color: #f7f7f7;
+  text-align: center;
+  padding: 50px 0;
 }
 
 .main__thelists {

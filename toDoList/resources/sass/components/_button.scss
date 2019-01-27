@@ -37,6 +37,15 @@
         background-color: white;
       }
     }
+
+    &--red{
+        background-color: rgb(218, 40, 40);
+        color: $color-white;
+    
+        &::after{
+          background-color: rgb(218, 40, 40);
+        }
+      }
   
   
   

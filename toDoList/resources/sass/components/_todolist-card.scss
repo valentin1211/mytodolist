@@ -19,7 +19,9 @@
             text-decoration: none;
             color: black;
             text-transform: capitalize;
-    
+            overflow-wrap: break-word;
+            padding-right: 40px;
+  
         }
 
     }
@@ -44,6 +46,7 @@
             padding-left: 3rem;
             color:black;
             font-weight: normal;
+            overflow-wrap: break-word;
             
             &--completed{
                 text-decoration: line-through;
